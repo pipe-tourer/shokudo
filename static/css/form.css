@@ -1,0 +1,60 @@
+html {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+body {
+  margin: 0;
+  margin-top: 88px;
+  background-color: #EBEBEB;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+	display: flex;
+  position: fixed;
+  width:100%;
+	height: 80px;
+	left:0;
+	top:0;
+	margin:0;
+  align-items: center;
+  background-color: #FFF;
+	z-index:1001;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); /*これを付け足し*/
+}
+  
+.title {
+  margin-right: auto;
+  padding: 1em;
+}
+  
+.user-kanri {
+  list-style: none;
+  display: inline-block;
+  padding: 2em;
+}
+
+form {
+  text-align: center;
+}
+
+.login_form_btm {
+  padding: 10px 0;
+  background-color: #EBEBEB;
+  ;
+  margin: 10px 0;
+}
+
+input {
+  width: 200px;
+  padding: 3px;
+  margin: 5px 0;
+}

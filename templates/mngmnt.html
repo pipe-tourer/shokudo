@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Meshi kanri</title>
+  <link rel="stylesheet" media="all" href="{{url_for('static', filename='css/style.css')}}">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h2 class="title">管理画面</h2>
+      <ul>
+        <nav="nav">
+          <li class="user-kanri"><a href="/">メニュー一覧</a></li>
+        </nav>
+      </ul>
+  </header>
+  <div class="menu-edit">
+    <a href="/dailymng">日替わりメニュー編集</a>
+  </div>
+  <div class="menu-edit">
+    <a href="/constmng">常設メニュー編集</a>
+  </div>
+  <div class="logout">
+    <button type="submit" href="/logout">ログアウト</button>
+  </div>
+
+</body>
+
+</html>

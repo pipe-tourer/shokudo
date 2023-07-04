@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Meshi Aruka? alpha</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="{{url_for('static', filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="title" id="back-top"><a href="#top">メニュー</a></h2>
+        <ul>
+            <nav="nav">
+                <li class="user-kanri"><a href="/login">管理者ログイン</a></li>
+            </nav="nav">
+        </ul>
+    </header>
+
+    <div class="modal">
+        <div class="modal-inner">
+            {% for menudata in menulists %}
+            <button class="mopen">
+                <div class="menu">
+                    <div class="menu-main">
+                        <h2>{{ menudata.menu_name }}</h2>
+                    </div>
+                    <div class="menu-main">
+                        <p>販売中</p>
+                    </div>
+                </div>
+                <div class="menu-detail">
+                    <h3>{{ menudata.price }}</h3>
+                </div>
+            </button>
+            {% endfor %}
+
+            {% for menudata in menulists %}
+            <div class="modalArea">
+                <div class="modalBg"></div>
+                <div class="modalWrapper">
+                    <div class="modalContents">
+                        <h1>{{ menudata.menu_name }}詳細</h1>
+                        <ul>{{ menudata.energy }}</ul>
+                        <ul>{{ menudata.protein }}</ul>
+                    </div>
+                </div>
+                <div class="closeModal">
+                    ×
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
+</body>
+
+</html>
