@@ -1,6 +1,6 @@
 import psycopg2
 
-def fetch_dailymenu(set, dte):
+def fetch_dailymenu(type, dte):
     
     conn = psycopg2.connect(
         host='localhost',
@@ -10,7 +10,7 @@ def fetch_dailymenu(set, dte):
     
     cur = conn.cursor()
     
-    if  set = 'A': #A/B選択情報による分岐
+    if  type = 'A': #A/B選択情報による分岐
         cur.execute('select * from dailymenu_a where hiduke = %s', [dte])  #選択した日付情報
     else:
         cur.execute('select * from dailymenu_b where hiduke = %s', [dte])  #選択した日付情報
