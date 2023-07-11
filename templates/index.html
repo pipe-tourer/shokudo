@@ -1,65 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja-JP">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Meshi Aruka? alpha</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="all" href="{{url_for('static', filename='css/style.css')}}">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&amp;display=swap"
-        rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Meshi aruka?</title>
+  <link rel="stylesheet" media="all" href="css/style.css">link rel="stylesheet" media="all" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
-<body>
-    <header>
-        <h2 class="title" id="back-top"><a href="#top">メニュー</a></h2>
-        <ul>
-            <nav="nav">
-                <li class="user-kanri"><a href="/login">管理者ログイン</a></li>
-            </nav="nav">
-        </ul>
-    </header>
+<body id="top">
+  <header>
+    <h2 class="title" id="back-top"><a href="#top">メニュー</a></h2>
+    <ul>
+      <nav="nav">
+        <li class="user-kanri"><a href="/login">管理者ログイン</a></li>
+        </nav>
+    </ul>
+  </header>
 
-    <div class="modal">
-        <div class="modal-inner">
-            {% for menudata in menulists %}
-            <button class="mopen">
-                <div class="menu">
-                    <div class="menu-main">
-                        <h2>{{ menudata.menu_name }}</h2>
-                    </div>
-                    <div class="menu-main">
-                        <p>販売中</p>
-                    </div>
-                </div>
-                <div class="menu-detail">
-                    <h3>{{ menudata.price }}</h3>
-                </div>
-            </button>
-            {% endfor %}
-
-            {% for menudata in menulists %}
-            <div class="modalArea">
-                <div class="modalBg"></div>
-                <div class="modalWrapper">
-                    <div class="modalContents">
-                        <h1>{{ menudata.menu_name }}詳細</h1>
-                        <ul>{{ menudata.energy }}</ul>
-                        <ul>{{ menudata.protein }}</ul>
-                    </div>
-                </div>
-                <div class="closeModal">
-                    ×
-                </div>
-            </div>
-            {% endfor %}
-
+  <!-- menu -->
+  <div class="modal">
+    <div class="modal-inner">
+      {% for menudata in menulists %}
+      <button class="mopen">
+        <div class="menu">
+          <div class="menu-main">
+            <h2>{{ menudata.menu_name }}</h2>
+          </div>
+          <div class="menu-main">
+            <p>{{ menudata.soldout }}</p>
+          </div>
         </div>
+        <div class="menu-detail">
+          <h3>{{ menudata.price }}</h3>
+        </div>
+      </button>
+      {% endfor %}
+
+      <!--以下メニュー詳細-->
+      {% for menudata in menulists %}
+      <div class="modalArea"><!-- class名をmodalAreaで統一 -->
+        <div class="modalBg"></div><!-- モーダルの背景-->
+        <div class="modalWrapper"><!-- モーダルの中身 -->
+          <div class="modalContents">
+            <h1>メニュー詳細</h1>
+            <p>メニュー名: {{ menudata.menu_name }}</p>
+            <p>エネルギー: {{ menudata.energy }}</p>
+            <p>タンパク質: {{ menudata.protein }}</p>
+            <p>脂質: {{ menudata.lipid }}</p>
+            <p>炭水化物: {{ menudata.carbohydrates }}</p>
+            <p>食塩相当量: {{ menudata.salt }}</p>
+            <p>アレルゲン: </p>
+
+            <button class="button2" type="urikire">売り切れ</button>
+          </div>
+          <div class="closeModal">×</div>
+        </div>
+      </div>
+      {% endfor %}
+
     </div>
-    <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
+  </div>
+
+  </section>
+  <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
 </body>
 
 </html>

@@ -87,6 +87,30 @@ button {
   border: none;
 }
 
+.button1 {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  height: 40px;
+  width: 50px;
+  padding: 10px;
+  background: white;
+  flex: 1 200px;
+  text-align: center;
+  border: 0.5px solid #333
+}
+
+.button2 {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  height: 40px;
+  width: auto;
+  padding: 10px;
+  background: white;
+  flex: 1 200px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 95px;
+  border: 0.5px solid #333
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -106,10 +130,6 @@ button {
 }
 
 /*ここからモーダルウィンドウ*/
-
-.modal {
-  margin-top: 88px;
-}
 
 
 .modal-inner {
@@ -150,8 +170,9 @@ button {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 275px;
-  height: 450px;
+  height: 480px;
   padding: 10px 30px;
+  margin-top: 30px;
   background: #fff;
 }
 
@@ -181,6 +202,12 @@ th {
   width: 10vh;
 }
 
+
+.kanri {
+  margin-top: 88px;
+}
+
+/*
 .menu-edit {
   height: auto;
   padding: 15px;
@@ -188,9 +215,10 @@ th {
   background: white;
   flex: 1 200px;
   text-align: center;
-  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2); /*これを付け足し*/
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2); 
   border-radius: 8px;
 }
+*/
 
 .logout {
   text-align: center;

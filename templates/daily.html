@@ -19,38 +19,47 @@
       </ul>
   </header>
 
-  <div class="edit-form">
-    <div>
-      <input type="date" name="example" value="yyyy-mm-dd">
-      <select name="prefecture">
+  <div class="kanri">
+    <div class="edit-form">
+      <div>
+        <input type="date" name="example" value="yyyy-mm-dd">
+        <select name="prefecture">
         <option value="">A/B</option>
         <option value="menu1">Aセット</option>
         <option value="menu2">Bセット</option>
-      </select>
-      <button type="submit">決定</button>
-    </div>
-
-    <form action="#" method="post">
-      <p>メニュー名：<input type="text" name="name"></p>
-      <p>エネルギー：<input type="text" name="energy"></p>   
-      <p>タンパク質：<input type="text" name="protein"></p>
-      <p>　　　脂質：<input type="text" name="lipid"></p>
-      <p>　炭水化物：<input type="text" name="carbo"></p>
-      <p>食塩相当量：<input type="text" name="salt"></p>
-
-    <div class="allergen">
-      <p>アレルゲン：<br>
-        <input type="checkbox" name="allergen" value="wheat">小麦
-        <input type="checkbox" name="allergen" value="egg">卵
-        <input type="checkbox" name="allergen" value="soba">そば
-        <input type="checkbox" name="allergen" value="peanut">落花生<br>
-        <input type="checkbox" name="allergen" value="crab">かに
-        <input type="checkbox" name="allergen" value="shrimp">えび
-        <input type="checkbox" name="allergen" value="milk">牛乳
-      </p>
-    </div>
-    <div class="keep">
-      <p><input type="submit" value="保存"></p>
-    </div>
-    </form>
+        </select>
+        <button class="button1" type="submit">決定</button>
+      </div>
+  
+      <form action="#" method="post">
+        <p>メニュー名：
+          <input type="text" name="name"></p>
+        <p>エネルギー：
+          <input type="text" name="energy"></p>   
+        <p>タンパク質：
+          <input type="text" name="protein"></p>
+        <p>　　　脂質：
+          <input type="text" name="lipid"></p>
+        <p>　炭水化物：
+          <input type="text" name="carbo"></p>
+        <p>食塩相当量：
+          <input type="text" name="salt"></p>
+  
+      <div class="allergen">
+        <p>アレルゲン：<br>
+          <input type="checkbox" name="allergen" value="wheat">小麦
+          <input type="checkbox" name="allergen" value="egg">卵
+          <input type="checkbox" name="allergen" value="soba">そば
+          <input type="checkbox" name="allergen" value="peanut">落花生<br>
+          <input type="checkbox" name="allergen" value="crab">かに
+          <input type="checkbox" name="allergen" value="shrimp">えび
+          <input type="checkbox" name="allergen" value="milk">牛乳
+        </p>
+      </div>
+      <div class="keep">
+        <p><input type="submit" value="保存"></p>
+      </div>
+      </form>
+  </div>
+  
   </div>
