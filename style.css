@@ -1,0 +1,247 @@
+html {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #EBEBEB;
+}
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 25px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+header {
+	display: flex;
+  position: fixed;
+  width:100%;
+	height: 80px;
+	left:0;
+	top:0;
+	margin:0;
+  align-items: center;
+  background-color: #FFF;
+	z-index:1001;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); /*これを付け足し*/
+}
+
+#top {
+  padding-top: 88px;
+}
+
+.title {
+  margin-right: auto;
+  padding: 1em;
+}
+
+.user-kanri {
+  list-style: none;
+  display: inline-block;
+  padding: 2em;
+}
+
+article {
+  height: auto;
+  padding: 10px;
+  margin: 8px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  background: white;
+  flex: 1 200px;
+  text-align: left;
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2); /*これを付け足し*/
+  border-radius: 8px;
+}
+
+button {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  height: auto;
+  width: 360px;
+  padding: 10px;
+  margin: 8px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  background: white;
+  flex: 1 200px;
+  text-align: left;
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2); /*これを付け足し*/
+  border-radius: 8px;
+  border: none;
+}
+
+.button1 {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  height: 40px;
+  width: 50px;
+  padding: 10px;
+  background: white;
+  flex: 1 200px;
+  text-align: center;
+  border: 0.5px solid #333
+}
+
+.button2 {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  height: 40px;
+  width: auto;
+  padding: 10px;
+  background: white;
+  flex: 1 200px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 95px;
+  border: 0.5px solid #333
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.menu-main {
+  vertical-align: bottom;
+}
+
+.menu-detail {
+  list-style: none;
+  display: inline-block;
+  width: 6em;
+  height: 40px;
+}
+
+/*ここからモーダルウィンドウ*/
+
+
+.modal-inner {
+  position: relative;
+}
+
+
+/*
+button {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  cursor: pointer;
+}
+*/
+
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.5);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 275px;
+  height: 480px;
+  padding: 10px 30px;
+  margin-top: 30px;
+  background: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.is-open {
+  display: block;
+}
+
+/*ここまでモーダルウィンドウ*/
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+table {
+  background: green;
+}
+
+th {
+  width: 10vh;
+}
+
+
+.kanri {
+  margin-top: 88px;
+}
+
+/*
+.menu-edit {
+  height: auto;
+  padding: 15px;
+  margin: 10px;
+  background: white;
+  flex: 1 200px;
+  text-align: center;
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px;
+}
+*/
+
+.logout {
+  text-align: center;
+}
+
+label {
+  font-size: 10px;
+  vertical-align: top;
+}
+
+.edit-form {
+  margin: 25px;
+  text-align: center;
+}
+
+.allergen {
+  position: absolute;
+  left: 50px;
+  top: 395px;
+  text-align: left;
+}
+
+.keep {
+  text-align: center;
+  margin: 125px;
+}
