@@ -39,6 +39,7 @@ class menu(db.Model):
     peanut = db.Column(db.Boolean, nullable=False, default=False)
     shrimp = db.Column(db.Boolean, nullable=False, default=False)
     crab = db.Column(db.Boolean, nullable=False, default=False)
+    soldout = db.Column(db.Boolean, nullable=False, default=False)
 
 class dailymenu_a(db.Model):
     menu_date = db.Column(db.DateTime(8), nullable=False)
@@ -108,7 +109,7 @@ def login():
         uname = request.form.get('username')
         upass = request.form.get('password')
         user = userdata.query.filter_by(uname=uname).first()
-        if check_password_hash(user.upass, upass):
+        if upass == user.upass: #check_password_hash(user.upass, upass):
             login_user(user)
             return redirect('/') # ログインが成功したらrootに戻る
         else:
